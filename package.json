@@ -1,0 +1,15 @@
+{
+  "name": "c13-ormbackend",
+  "version": "1.0.0",
+  "description": "Challenge 13 - Boot Camp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.9"
+  }
+}
