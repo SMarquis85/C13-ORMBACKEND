@@ -1,38 +1,34 @@
-// Import models
-const Movie = require('./Movie');
-const Actor = require('./Actor');
-const Character = require('./Character');
+// import models
+const Product = require('./Product');
 const Category = require('./Category');
+const Tag = require('./Tag');
+const ProductTag = require('./ProductTag');
 
-// Actor has one Character
-Actor.hasOne(Character, {
-  foreignKey: 'actor_id'
-});
-
-// Movie has one Character
-Movie.hasOne(Character, {
-  foreignKey: 'movie_id'
-});
-
-// Category has one Character
-Category.hasOne(Character, {
+// Products belongsTo Category
+Product.belongsTo(Category, {
   foreignKey: 'category_id'
-});
+})
 
-// Character belongs to an Actor, a Movie, and a Category
-Character.belongsTo(Actor, {
-  foreignKey: 'actor_id'
-});
-Character.belongsTo(Movie, {
-  foreignKey: 'movie_id'
-});
-Character.belongsTo(Category, {
+// Categories have many Products
+Category.hasMany(Product, {
   foreignKey: 'category_id'
-});
+})
+
+// Products belongToMany Tags (through ProductTag)
+Product.belongsToMany(Tag, {
+  through: 'ProductTag',
+  foreignKey: 'product_id'
+})
+
+// Tags belongToMany Products (through ProductTag)
+Tag.belongsToMany(Product, {
+  through: 'ProductTag',
+  foreignKey: 'tag_id'
+})
 
 module.exports = {
-  Movie,
-  Actor,
-  Character,
-  Category
+  Product,
+  Category,
+  Tag,
+  ProductTag,
 };
