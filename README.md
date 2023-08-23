@@ -52,19 +52,13 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Screenshots
 
-![images/Node1.png](images/Node1.png)
+![]()
 
-![images/Node2.png](images/Node2.png)
 
-![images/Node3.png](images/Node3.png)
-
-![images/Node4.png](images/Node4.png)
 
 ## Walkthrough Videos
 
-https://drive.google.com/file/d/1JykXZG6BHhkz2lh9F6i69dVe8Eh3cqYC
 
-https://drive.google.com/file/d/1RIqGLK8JrAVD-F7C_hx14PU4ck5taqw0
 
 ## License
 
